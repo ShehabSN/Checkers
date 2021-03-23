@@ -14,8 +14,8 @@ main =
   frontend
     GameConfig
       { engine = apply_move,
-        blackMove = Ai ai,
-        redMove = Human,
+        blackMove = Human,
+        redMove = Ai red_ai,
         state = initialGameState 
       }
 

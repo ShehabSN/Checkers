@@ -5,9 +5,13 @@ import Moves
 import ApplyMove
 import Heuristic
 
--- | The 'ai' function takes in a gamestate and returns a move it evaluates to be a good move to take given the current state
-ai :: GenMove 
-ai state = snd (alphabeta state 10 minBound maxBound True (status state))
+-- | The 'red_ai' function takes in a gamestate and returns a move it evaluates to be a good move for red to take given the current state
+red_ai :: GenMove 
+red_ai state = snd (alphabeta state 10 minBound maxBound True (Turn Red))
+
+-- | The 'ai' function takes in a gamestate and returns a move it evaluates to be a good move for black to take given the current state
+black_ai :: GenMove 
+black_ai state = snd (alphabeta state 10 minBound maxBound True (Turn Black))
 
 -- | The 'computeHeuristic' function calculates a value using a heuristic function, depending on the gamestate and whose turn it is
 computeHeuristic :: GameState -> Status -> (Int, Move)
