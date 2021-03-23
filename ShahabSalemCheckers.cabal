@@ -21,7 +21,6 @@ executable ShahabSalemCheckers
   hs-source-dirs: src
   other-modules:  Moves
                   , ApplyMove
-                  , Types
                   , Heuristic
                   , ABSearch
 
